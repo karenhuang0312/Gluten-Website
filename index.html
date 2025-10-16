@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nature's Remedy: Gluten Support</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Nature's Remedy: Natural Support for Gluten Intolerance</h1>
+    <p>Learn how natural plant extracts may support digestion and help reduce gluten sensitivity symptoms.</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Gluten</a>
+    <a href="#remedies">Natural Remedies</a>
+    <a href="#combo">Test Your Combo</a>
+  </nav>
+
+  <section id="combo">
+    <h2>Test Your Combo</h2>
+    <p>Select up to <strong>three</strong> natural extracts and click <em>Predict</em> to see an estimated gluten level based on my experiment data.</p>
+
+    <form id="combo-form" onsubmit="return false;">
+      <label><input type="checkbox" name="extract" value="pineapple"> Pineapple (bromelain)</label><br>
+      <label><input type="checkbox" name="extract" value="papaya"> Papaya (papain)</label><br>
+      <label><input type="checkbox" name="extract" value="ginger"> Ginger</label><br>
+      <label><input type="checkbox" name="extract" value="turmeric"> Turmeric</label><br>
+      <label><input type="checkbox" name="extract" value="aloe"> Aloe Vera</label><br>
+      <button type="button" onclick="predictCombo()">Predict</button>
+      <button type="button" onclick="resetCombo()">Clear</button>
+    </form>
+
+    <div id="combo-result" style="display:none;">
+      <h3>Prediction</h3>
+      <p id="combo-names"></p>
+      <p><strong>Estimated Gluten Level:</strong> <span id="combo-value"></span> g/L</p>
+      <div id="combo-color"></div>
+      <p id="combo-interpret"></p>
+      <p id="combo-explain"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Nature's Remedy – Educational Science Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
