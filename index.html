@@ -16,7 +16,6 @@
   --card: #FFFFFF;
 }
 
-/* ---------- GLOBAL ---------- */
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -24,7 +23,6 @@ body {
   color: var(--text);
 }
 
-/* ---------- LANDING ---------- */
 #landing {
   height: 100vh;
   background: linear-gradient(135deg, var(--green), var(--yellow));
@@ -36,14 +34,8 @@ body {
   padding: 40px;
 }
 
-#landing h1 {
-  font-size: 3.3em;
-}
-
-#landing p {
-  font-size: 1.3em;
-  max-width: 550px;
-}
+#landing h1 { font-size: 3.3em; }
+#landing p { font-size: 1.3em; max-width: 550px; }
 
 #landing button {
   margin-top: 30px;
@@ -55,25 +47,16 @@ body {
   border-radius: 30px;
   cursor: pointer;
   font-weight: bold;
-  transition: 0.3s;
 }
 
-#landing button:hover {
-  transform: scale(1.06);
-  background: var(--light-green);
-}
-
-/* ---------- MAIN ---------- */
 #main { display: none; }
 
-/* ---------- HEADER ---------- */
 header {
   background: linear-gradient(to right, var(--green), var(--yellow));
   padding: 30px;
   text-align: center;
 }
 
-/* ---------- NAV ---------- */
 nav {
   position: sticky;
   top: 0;
@@ -93,12 +76,8 @@ nav a {
   font-weight: bold;
 }
 
-nav a:hover {
-  background: var(--green);
-  color: white;
-}
+nav a:hover { background: var(--green); color: white; }
 
-/* ---------- SECTIONS ---------- */
 section {
   max-width: 1050px;
   margin: 45px auto;
@@ -108,11 +87,8 @@ section {
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-h2 {
-  color: var(--dark-green);
-}
+h2 { color: var(--dark-green); }
 
-/* ---------- CARDS ---------- */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -123,14 +99,8 @@ h2 {
   background: var(--light-green);
   padding: 22px;
   border-radius: 16px;
-  transition: 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-}
-
-/* ---------- IMAGES ---------- */
 .project-img {
   max-width: 100%;
   border-radius: 14px;
@@ -138,7 +108,6 @@ h2 {
   margin-top: 20px;
 }
 
-/* ---------- COMBO ---------- */
 #combo-result {
   display: none;
   margin-top: 20px;
@@ -148,14 +117,12 @@ h2 {
 }
 
 #combo-color {
-  width: 120px;
-  height: 24px;
+  width: 140px;
+  height: 26px;
   border-radius: 6px;
   border: 1px solid #999;
-  margin: 10px 0;
 }
 
-/* ---------- FOOTER ---------- */
 footer {
   text-align: center;
   padding: 20px;
@@ -163,26 +130,22 @@ footer {
 }
 </style>
 </head>
-
 <body>
 
-<!-- ===== LANDING ===== -->
 <div id="landing">
   <h1>Nature’s Remedy</h1>
   <p>Evaluating natural plant extracts for gluten degradation</p>
   <button onclick="enterSite()">Enter Project</button>
 </div>
 
-<!-- ===== MAIN SITE ===== -->
 <div id="main">
-
 <header>
   <h1>Natural Support for Gluten Digestion</h1>
   <p>Science Fair Research Project</p>
 </header>
 
 <nav>
-    <a href="#about">About Gluten</a>
+  <a href="#about">About Gluten</a>
   <a href="#remedies">Extracts</a>
   <a href="#experiment">Experiment</a>
   <a href="#results">Results</a>
@@ -191,137 +154,59 @@ footer {
 </nav>
 
 <section id="about">
-  <h2>About Gluten Intolerance</h2>
-
-  <p>
-    Gluten is a protein found in wheat, barley, and rye. Some people have
-    difficulty digesting gluten, which can cause symptoms such as bloating,
-    stomach pain, fatigue, and headaches.
-  </p>
-
-  <p>
-    Celiac disease is an autoimmune disorder where gluten damages the small
-    intestine, while non-celiac gluten sensitivity causes symptoms without
-    permanent intestinal damage.
-  </p>
-
-  <img 
-    src="Gluten Intolerance vs. Celiac Disease.webp" 
-    class="project-img" 
-    alt="Comparison of gluten intolerance and celiac disease"
-  >
-
-  <p style="font-size: 0.9em; color: #555; margin-top: 10px;">
-    Figure: Key differences between celiac disease and non-celiac gluten sensitivity.
-  </p>
+<h2>About Gluten Intolerance</h2>
+<p>Gluten is a protein found in wheat, barley, and rye. Some people have difficulty digesting gluten, which can cause bloating, stomach pain, fatigue, and headaches.</p>
+<p>Celiac disease is an autoimmune disorder where gluten damages the small intestine, while non-celiac gluten sensitivity causes symptoms without permanent intestinal damage.</p>
+<img src="Gluten Intolerance vs. Celiac Disease.webp" class="project-img">
 </section>
 
 <section id="remedies">
-  <h2>Natural Remedies Studied</h2>
-  <div class="card-grid">
-    <div class="card"><strong>Papaya</strong><br>Papain enzyme</div>
-    <div class="card"><strong>Pineapple</strong><br>Bromelain enzyme</div>
-    <div class="card"><strong>Ginger</strong><br>Digestive support</div>
-    <div class="card"><strong>Turmeric</strong><br>Anti-inflammatory</div>
-    <div class="card"><strong>Aloe Vera</strong><br>Soothing effects</div>
-  </div>
+<h2>Natural Remedies Studied</h2>
+<div class="card-grid">
+  <div class="card"><strong>Papaya</strong><br>Papain enzyme</div>
+  <div class="card"><strong>Pineapple</strong><br>Bromelain enzyme</div>
+  <div class="card"><strong>Ginger</strong><br>Digestive support</div>
+  <div class="card"><strong>Turmeric</strong><br>Anti-inflammatory</div>
+  <div class="card"><strong>Aloe Vera</strong><br>Soothing effects</div>
+</div>
 </section>
 
 <section id="experiment">
-  <h2>My Science Experiment</h2>
-
-  <p>
-    I tested natural plant extracts to see if they could help break down
-    gluten using controlled lab methods and protein test strips.
-  </p>
-
-  <h3>Key Findings</h3>
-  <ul>
-    <li><strong>Best breakdown:</strong> Combo A (Pineapple + Ginger + Aloe).</li>
-    <li>Pineapple and papaya were most effective due to enzymes
-        <strong>bromelain</strong> and <strong>papain</strong>.</li>
-    <li>Ginger alone showed minimal gluten breakdown.</li>
-  </ul>
-
-  <h3>Methodology: How I Made and Tested the Gluten Samples</h3>
-
-  <h4>Step 1: Dough Formation</h4>
-  <ul>
-    <li><strong>Materials:</strong> 100 g all-purpose flour, 60 mL distilled water</li>
-    <li>Measured 100 g of flour using a digital scale.</li>
-    <li>Measured 60 mL of distilled water using a graduated cylinder.</li>
-    <li>Combined flour and water in a bowl.</li>
-    <li>Kneaded until a uniform, soft dough formed (gloves worn).</li>
-    <li>Covered and rested dough for 15–30 minutes to allow gluten development.</li>
-  </ul>
-
-  <h4>Step 2: Starch Washing</h4>
-  <ul>
-    <li><strong>Materials:</strong> 300 mL distilled water (repeated)</li>
-    <li>Placed dough in a bowl and added 300 mL distilled water.</li>
-    <li>Gently kneaded to release starch.</li>
-    <li>Poured off milky starch water after 1–2 minutes.</li>
-    <li>Repeated washing 4–6 times until water became mostly clear.</li>
-    <li>Remaining rubbery mass was isolated gluten.</li>
-  </ul>
-
-  <h4>Step 3: Collecting and Drying the Gluten</h4>
-  <ul>
-    <li>Gently squeezed gluten to remove excess water.</li>
-    <li>Optionally spread gluten on a tray or Petri dish.</li>
-    <li>Air-dried for 24–48 hours or oven-dried below 50°C.</li>
-  </ul>
-
-  <h4>Step 4: Treating with Natural Extracts</h4>
-  <ul>
-    <li>Cut dried gluten into approximately 1 g pieces.</li>
-    <li>Placed one piece into each Petri dish.</li>
-    <li>Added 2 mL of extract or combination mixture.</li>
-    <li>Left samples at room temperature for several hours
-        to allow enzyme reactions.</li>
-  </ul>
-
-  <h4>Step 5: Testing Gluten Breakdown</h4>
-  <ul>
-    <li>Used protein test strips to measure gluten levels.</li>
-    <li>Compared strip color to reference chart:</li>
-    <ul>
-      <li><strong>Green / Yellow:</strong> Low Gluten (0.3 g/L)</li>
-      <li><strong>Moderate Green:</strong> 1–3 g/L</li>
-      <li><strong>Dark:</strong> High Gluten (≥10 g/L)</li>
-    </ul>
-  </ul>
-
-  <img src="Papaya Procedure.PNG" class="project-img"
-       alt="Making the Papaya Extract">
+<h2>My Science Experiment</h2>
+<p>I tested natural plant extracts to see if they could help break down gluten using controlled lab methods and protein test strips.</p>
+<ul>
+<li><strong>Best breakdown:</strong> Combo A (Pineapple + Ginger + Aloe)</li>
+<li>Pineapple and papaya most effective</li>
+<li>Ginger alone showed little breakdown</li>
+</ul>
+<img src="Papaya Procedure.PNG" class="project-img">
 </section>
 
-
 <section id="results">
-  <h2>Results & Observations</h2>
-  <ul>
-    <li>Best breakdown: Pineapple + Ginger + Aloe</li>
-    <li>Pineapple and papaya strongest individually</li>
-    <li>Ginger alone showed little breakdown</li>
-  </ul>
-  <img src="Gluten Levels Table.PNG" class="project-img" alt="Gluten Table">
-  <img src="Analysis Gluten Levels.PNG" class="project-img" alt="Gluten Analysis">
+<h2>Results & Observations</h2>
+<ul>
+<li>Best breakdown: Pineapple + Ginger + Aloe</li>
+<li>Pineapple and papaya strongest individually</li>
+<li>Ginger weakest alone</li>
+</ul>
+<img src="Gluten Levels Table.PNG" class="project-img">
+<img src="Analysis Gluten Levels.PNG" class="project-img">
 </section>
 
 <section id="combo">
-  <h2>Test Your Combination</h2>
-  <p>
-  Select up to <strong>three</strong> natural extracts and click
-  <em>Predict</em> to see an estimated gluten level based on my
-  experimental data.
+<h2>Test Your Combination</h2>
+<p>
+Select up to <strong>three</strong> natural extracts and click
+<em>Predict</em> to see an estimated gluten level based on my
+experimental data.
 </p>
 
 <p>
-  If you select one of the exact combinations I tested in my experiment
-  (Combo A, B, or C), the tool will display the
-  <strong>real measured value</strong> from my lab results.
-  Other combinations are estimated using single-extract data and
-  simple synergy rules described below.
+If you select one of the exact combinations I tested in my experiment
+(Combo A, B, or C), the tool will display the
+<strong>real measured value</strong> from my lab results.
+Other combinations are estimated using single-extract data and
+simple synergy rules described below.
 </p>
 
 <details style="margin-top:20px;">
@@ -362,37 +247,32 @@ footer {
   </ul>
 </details>
 
+<form id="combo-form">
+<label><input type="checkbox" value="pineapple"> Pineapple</label><br>
+<label><input type="checkbox" value="papaya"> Papaya</label><br>
+<label><input type="checkbox" value="ginger"> Ginger</label><br>
+<label><input type="checkbox" value="turmeric"> Turmeric</label><br>
+<label><input type="checkbox" value="aloe"> Aloe Vera</label><br><br>
+<button type="button" onclick="predictCombo()">Predict</button>
+<button type="button" onclick="resetCombo()">Clear</button>
+</form>
 
-  <form id="combo-form">
-    <label><input type="checkbox" value="pineapple"> Pineapple</label><br>
-    <label><input type="checkbox" value="papaya"> Papaya</label><br>
-    <label><input type="checkbox" value="ginger"> Ginger</label><br>
-    <label><input type="checkbox" value="turmeric"> Turmeric</label><br>
-    <label><input type="checkbox" value="aloe"> Aloe</label><br><br>
-
-    <button type="button" onclick="predictCombo()">Predict</button>
-    <button type="button" onclick="resetCombo()">Clear</button>
-  </form>
-
-  <div id="combo-result">
-    <p id="combo-names"></p>
-    <p><strong>Gluten Level:</strong> <span id="combo-value"></span> g/L</p>
-    <div id="combo-color"></div>
-    <p id="combo-interpret"></p>
-    <p id="combo-explain"></p>
-  </div>
+<div id="combo-result">
+  <p id="combo-names"></p>
+  <p><strong>Gluten Level:</strong> <span id="combo-value"></span> g/L</p>
+  <div id="combo-color"></div>
+  <p id="combo-interpret"></p>
+  <p id="combo-explain"></p>
+</div>
 </section>
 
 <section id="faq">
-  <h2>FAQ</h2>
-  <p><strong>Does this cure gluten intolerance?</strong> No.</p>
-  <p><strong>Is this a replacement for gluten-free diets?</strong> No.</p>
+<h2>FAQ</h2>
+<p><strong>Does this cure gluten intolerance?</strong> No.</p>
+<p><strong>Is this a replacement for gluten-free diets?</strong> No.</p>
 </section>
 
-<footer>
-  © 2025 Nature’s Remedy – Educational Science Project
-</footer>
-
+<footer>© 2025 Nature’s Remedy – Educational Science Project</footer>
 </div>
 
 <script>
@@ -401,32 +281,55 @@ function enterSite(){
   document.getElementById("main").style.display="block";
 }
 
-const singleLevels = {
-  pineapple:0.3, papaya:1.1, ginger:10, turmeric:1.0, aloe:0.3
-};
+const singleLevels={ pineapple:0.3, papaya:1.1, ginger:10, turmeric:1.0, aloe:0.3 };
 
-const testedCombos = {
+const testedCombos={
   "aloe-ginger-pineapple":0.3,
   "ginger-papaya-pineapple":1.0,
   "ginger-papaya-turmeric":1.2
 };
 
 function predictCombo(){
-  const chosen=[...document.querySelectorAll("#combo-form input:checked")].map(x=>x.value);
-  if(chosen.length===0||chosen.length>3){ alert("Select 1–3 extracts"); return;}
-  const key=chosen.slice().sort().join("-");
-  let val=testedCombos[key] ?? chosen.reduce((a,b)=>a+singleLevels[b],0)/chosen.length;
-  if(chosen.includes("papaya")&&chosen.includes("pineapple")) val*=0.7;
-  if(chosen.includes("aloe")) val-=0.1;
-  if(val<0.3) val=0.3;
-  val=Math.round(val*100)/100;
+  const chosen=[...document.querySelectorAll('#combo-form input:checked')].map(c=>c.value);
+  if(chosen.length===0||chosen.length>3){ alert('Select 1–3 extracts'); return; }
 
-  document.getElementById("combo-result").style.display="block";
-  document.getElementById("combo-value").textContent=val;
+  const key=chosen.slice().sort().join('-');
+  let value;
+  let explanation="";
+
+  if(testedCombos[key]!==undefined){
+    value=testedCombos[key];
+    explanation="This combination was directly tested in the experiment.";
+  } else {
+    value=chosen.reduce((a,b)=>a+singleLevels[b],0)/chosen.length;
+    explanation="Estimated from single-extract data.";
+    if(chosen.includes('papaya')&&chosen.includes('pineapple')){
+      value*=0.7; explanation+=' Enzyme synergy applied.';
+    }
+    if(chosen.includes('aloe')){
+      value-=0.1; explanation+=' Aloe soothing adjustment applied.';
+    }
+  }
+
+  if(value<0.3) value=0.3;
+  value=Math.round(value*100)/100;
+
+  let color,text;
+  if(value<=0.3){ color='#8BC34A'; text='Very low gluten detected'; }
+  else if(value<=3){ color='#FFD54F'; text='Moderate gluten level'; }
+  else { color='#E57373'; text='High gluten level'; }
+
+  document.getElementById('combo-result').style.display='block';
+  document.getElementById('combo-names').textContent='Selected: '+chosen.join(', ');
+  document.getElementById('combo-value').textContent=value;
+  document.getElementById('combo-color').style.background=color;
+  document.getElementById('combo-interpret').textContent=text;
+  document.getElementById('combo-explain').textContent=explanation;
 }
+
 function resetCombo(){
-  document.querySelectorAll("#combo-form input").forEach(x=>x.checked=false);
-  document.getElementById("combo-result").style.display="none";
+  document.querySelectorAll('#combo-form input').forEach(c=>c.checked=false);
+  document.getElementById('combo-result').style.display='none';
 }
 </script>
 
