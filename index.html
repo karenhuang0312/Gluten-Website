@@ -76,6 +76,22 @@ nav a {
   font-weight: bold;
 }
 
+nav a {
+  transition: 
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease;
+}
+
+nav a:hover {
+  background: var(--green);
+  color: white;
+  box-shadow:
+    0 0 10px rgba(95, 174, 78, 0.6),
+    0 0 20px rgba(95, 174, 78, 0.35);
+  transform: translateY(-2px);
+}
+
 nav a:hover { background: var(--green); color: white; }
 
 section {
@@ -103,6 +119,36 @@ h2 { color: var(--dark-green); }
   text-decoration: none; /* remove underline */
   color: var(--text);    /* normal black text */
   display: block;
+}
+.card {
+  background: var(--light-green);
+  padding: 22px;
+  border-radius: 16px;
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+  text-decoration: none;
+  color: var(--text);
+  display: block;
+  position: relative;
+}
+
+/* GREEN GLOW ON HOVER */
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  background: #f1fbef;
+  box-shadow:
+    0 0 12px rgba(95, 174, 78, 0.6),
+    0 0 28px rgba(95, 174, 78, 0.4),
+    0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Optional: subtle glow even when focused (keyboard users 👍) */
+.card:focus {
+  outline: none;
+  box-shadow:
+    0 0 10px rgba(95, 174, 78, 0.6);
 }
 
 .card:visited {
