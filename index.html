@@ -99,6 +99,14 @@ h2 { color: var(--dark-green); }
   background: var(--light-green);
   padding: 22px;
   border-radius: 16px;
+  transition: 0.3s;
+  text-decoration: none; /* remove underline */
+  color: var(--text);    /* normal black text */
+  display: block;
+}
+
+.card:visited {
+  color: var(--text); /* keep color after click */
 }
 
 .project-img {
