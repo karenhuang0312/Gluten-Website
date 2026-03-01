@@ -292,6 +292,86 @@ footer {
   border-radius: 14px;
   border: 2px solid #4a9c5d;
 }
+
+/* ----------------------------- */
+/* RESEARCH HERO BANNER          */
+/* ----------------------------- */
+
+.research-hero {
+  max-width: 100%;
+  margin: 0;
+  padding: 80px 8%;
+  background: linear-gradient(135deg, var(--dark-green), var(--green));
+  color: white;
+  text-align: center;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.research-hero h1 {
+  font-size: 2.6rem;
+  margin: 20px auto 16px;
+  max-width: 720px;
+  line-height: 1.25;
+  color: white;
+}
+
+.research-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.research-subtitle {
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto 28px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.research-meta {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.research-meta span {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.primary-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: var(--yellow);
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 14px rgba(244, 211, 94, 0.6),
+    0 0 24px rgba(244, 211, 94, 0.3);
+}
 </style>
 </head>
 
@@ -505,6 +585,21 @@ footer {
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
 </nav>
+
+<section class="research-hero">
+  <div class="research-badge">Independent Research Project</div>
+  <h1>Natural Plant Extracts and Their Effect on Gluten Breakdown</h1>
+  <p class="research-subtitle">
+    An experimental investigation into enzymatic activity,
+    protein detection limits, and synergistic extract combinations.
+  </p>
+  <div class="research-meta">
+    <span>Experimental Data Collected</span>
+    <span>Controlled Lab Testing</span>
+    <span>Quantitative Analysis</span>
+  </div>
+  <a href="#experiment" class="primary-btn">View Experimental Results</a>
+</section>
 
 <section id="about">
 
