@@ -1,7 +1,12 @@
 /* ---------- ENTER PROJECT ---------- */
 function enterSite(){
-  document.getElementById("welcome").style.display = "none";
-  document.getElementById("main").style.display = "block";
+  const welcome = document.getElementById("welcome");
+  const main = document.getElementById("main");
+
+  if (welcome && main) {
+    welcome.style.display = "none";
+    main.style.display = "block";
+  }
 }
 
 /* ---------- AUTO-SKIP WELCOME IF FROM BACK BUTTON ---------- */
