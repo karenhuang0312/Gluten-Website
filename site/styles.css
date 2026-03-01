@@ -1,0 +1,440 @@
+:root {
+  --green: #5FAE4E;
+  --dark-green: #3F7F34;
+  --light-green: #EAF5E6;
+  --yellow: #F4D35E;
+  --bg: #F8FAF8;
+  --text: #2B2B2B;
+  --card: #FFFFFF;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+  padding-top: 60px;
+}
+
+/* ============================== */
+/* NAV BAR - FIXED AT TOP         */
+/* ============================== */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  color: var(--text);
+  font-weight: bold;
+  transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  background: var(--green);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 10px rgba(95,174,78,0.6),
+    0 0 20px rgba(95,174,78,0.35);
+}
+
+nav a.active {
+  background: var(--green);
+  color: white !important;
+  box-shadow: 0 0 20px rgba(95, 174, 78, 0.45);
+}
+
+/* ============================== */
+/* DROPDOWN NAV                   */
+/* ============================== */
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  color: var(--text);
+  font-weight: bold;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 240px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 1001;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.dropdown-content a:hover {
+  background: var(--light-green);
+  color: var(--dark-green);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ============================== */
+/* WELCOME / LANDING SECTION      */
+/* ============================== */
+
+#welcome {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  background: linear-gradient(135deg, var(--green), var(--yellow));
+  color: white;
+  margin-top: -60px;
+  padding-top: 60px;
+}
+
+#welcome-left {
+  width: 50%;
+  padding-right: 40px;
+}
+
+#welcome-left h1 {
+  font-size: 3.2rem;
+  margin-bottom: 15px;
+}
+
+#welcome-left p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  max-width: 480px;
+}
+
+#welcome-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-card {
+  width: 85%;
+  background: var(--card);
+  color: var(--text);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideGlow 1.3s ease forwards;
+}
+
+@keyframes slideGlow {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+    box-shadow: 0 0 0 rgba(95,174,78,0);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(95,174,78,0.35);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 0 12px rgba(95,174,78,0.25);
+  }
+}
+
+#enter-btn {
+  margin-top: 25px;
+  padding: 14px 34px;
+  border-radius: 30px;
+  background: var(--green);
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+#enter-btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 12px rgba(255,255,255,0.7),
+    0 0 16px rgba(255,255,255,0.4);
+}
+
+.didyouknow {
+  background: var(--light-green);
+  padding: 14px;
+  border-radius: 12px;
+  margin-top: 18px;
+  border-left: 6px solid var(--green);
+}
+
+/* ============================== */
+/* MAIN CONTENT AREA              */
+/* ============================== */
+
+#landing { display: none; }
+#main { display: none; }
+
+header {
+  background: linear-gradient(to right, var(--green), var(--yellow));
+  padding: 30px;
+  text-align: center;
+}
+
+section {
+  max-width: 1050px;
+  margin: 45px auto;
+  padding: 40px;
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+h2 { color: var(--dark-green); }
+
+/* ============================== */
+/* EXTRACT CARDS                  */
+/* ============================== */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--light-green);
+  padding: 22px;
+  border-radius: 16px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  text-decoration: none;
+  color: var(--text);
+  display: block;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  background: #f1fbef;
+  box-shadow:
+    0 0 12px rgba(95, 174, 78, 0.6),
+    0 0 28px rgba(95, 174, 78, 0.4),
+    0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(95, 174, 78, 0.6);
+}
+
+.card:visited {
+  color: var(--text);
+}
+
+/* ============================== */
+/* PROJECT IMAGES                 */
+/* ============================== */
+
+.project-img {
+  max-width: 100%;
+  border-radius: 14px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+/* ============================== */
+/* TEST YOUR COMBO SECTION        */
+/* ============================== */
+
+#combo-result {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+}
+
+#combo-color {
+  width: 140px;
+  height: 26px;
+  border-radius: 6px;
+  border: 1px solid #999;
+}
+
+#combo-form label {
+  display: inline-block;
+  margin: 6px 14px 6px 0;
+  font-size: 1.05rem;
+}
+
+#combo-form button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: var(--green);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 8px;
+}
+
+#combo-form button:hover {
+  background: var(--dark-green);
+}
+
+#combo details {
+  margin-top: 20px;
+  padding: 15px;
+  background: var(--light-green);
+  border-radius: 12px;
+}
+
+#combo details summary {
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+/* ============================== */
+/* FACT CARDS / COMPARE           */
+/* ============================== */
+
+.fact-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.fact-card {
+  background: #e8f9f0;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-left: 6px solid #4a9c5d;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.split-compare {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.compare-box {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  background: #f0fff7;
+  border-radius: 14px;
+  border: 2px solid #4a9c5d;
+}
+
+/* ============================== */
+/* RESEARCH HERO SECTION          */
+/* ============================== */
+
+.research-hero {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #f4fbf2, #ffffff);
+}
+
+.research-badge {
+  display: inline-block;
+  background: #e6f4e3;
+  color: var(--dark-green);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.research-hero h1 {
+  font-size: 2.6rem;
+  color: #1f3d1f;
+  max-width: 900px;
+  margin: 0 auto 20px;
+}
+
+.research-subtitle {
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #555;
+}
+
+.research-meta {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+  font-size: 0.9rem;
+  color: #4d4d4d;
+}
+
+.research-meta span {
+  background: #f1f7ef;
+  padding: 8px 14px;
+  border-radius: 12px;
+}
+
+.primary-btn {
+  padding: 14px 30px;
+  background: var(--green);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(95,174,78,0.4);
+}
+
+/* ============================== */
+/* FOOTER                         */
+/* ============================== */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--yellow);
+}

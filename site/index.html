@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nature's Remedy – Gluten Support</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR - FIXED AT TOP -->
+<nav>
+  
+  <div class="dropdown">
+    <a href="#" class="dropbtn">About Gluten &#9662;</a>
+    <div class="dropdown-content">
+      <a href="about-intolerance.html">About Gluten Intolerance</a>
+      <a href="gluten-facts.html">Gluten &amp; Celiac Facts</a>
+      <a href="genetics.html">Genetics &amp; Ethnicity</a>
+      <a href="nature-vs-genetics.html">Nature vs Genetics</a>
+    </div>
+  </div>
+  <a href="#remedies">Extracts</a>
+  <a href="#experiment">Experiment</a>
+  <a href="#results">Results</a>
+  <a href="#combo">Test Your Combo</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- WELCOME SECTION -->
+<div id="welcome">
+  <div id="welcome-left">
+    <h1>Nature's Remedy</h1>
+    <p><strong>A student science project exploring how natural plant extracts may help break down gluten.</strong></p>
+    <p>This website lets you learn about gluten sensitivity, explore different natural extracts, and even test your own extract combinations using my real experimental data.</p>
+  </div>
+
+  <div id="welcome-right">
+    <div class="welcome-card">
+      <h2>What This Website Offers</h2>
+      <ul>
+        <li>&#10004; Easy explanation of gluten intolerance</li>
+        <li>&#10004; Science-based plant extract profiles</li>
+        <li>&#10004; Photos of my real lab experiment</li>
+        <li>&#10004; Interactive "Test Your Combination" predictor</li>
+        <li>&#10004; Real measured gluten breakdown levels</li>
+      </ul>
+
+      <div class="didyouknow">
+        <strong>Did you know?</strong><br>
+        Bromelain (in pineapple) and papain (in papaya) are used in real digestive supplements.
+      </div>
+
+      <button id="enter-btn" onclick="enterSite()">Enter Project</button>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT (HIDDEN INITIALLY) -->
+<div id="main">
+
+<!-- RESEARCH HERO -->
+<section class="research-hero">
+  <div class="research-badge">Independent Research Project</div>
+
+  <h1>Natural Plant Extracts and Their Effect on Gluten Breakdown</h1>
+
+  <p class="research-subtitle">
+    An experimental investigation into enzymatic activity,
+    protein detection limits, and synergistic extract combinations.
+  </p>
+
+  <div class="research-meta">
+    <span>Experimental Data Collected</span>
+    <span>Controlled Lab Testing</span>
+    <span>Quantitative Analysis</span>
+  </div>
+
+  <a href="#experiment" class="primary-btn">View Experimental Results</a>
+</section>
+
+<section id="remedies">
+  <h2>Natural Remedies Studied</h2>
+  <p style="margin-bottom:20px;">Click on each extract to learn more about how it supports digestion and gluten sensitivity.</p>
+  <div class="card-grid">
+    <a href="#papaya" class="card"><strong>Papaya</strong><br>Papain &amp; Caricain enzymes</a>
+    <a href="#pineapple" class="card"><strong>Pineapple</strong><br>Bromelain enzyme</a>
+    <a href="#ginger" class="card"><strong>Ginger</strong><br>Digestive support</a>
+    <a href="#turmeric" class="card"><strong>Turmeric</strong><br>Anti-inflammatory</a>
+    <a href="#aloe" class="card"><strong>Aloe Vera</strong><br>Soothing effects</a>
+  </div>
+</section>
+
+<section id="papaya">
+  <h2>Papaya</h2>
+  <p>
+    Papaya contains enzymes called <strong>papain</strong> and <strong>caricain</strong>, which help break down proteins,
+    including gluten. Caricain is used in some digestive supplements such as <em>GluteGuard</em>.
+  </p>
+  <p>
+    Papaya also provides dietary fiber, supports healthy gut bacteria, and may help relieve constipation and bloating.
+  </p>
+</section>
+
+<section id="pineapple">
+  <h2>Pineapple</h2>
+  <p>
+    Pineapple contains the enzyme <strong>bromelain</strong>, which breaks down proteins and reduces inflammation.
+    Bromelain supports digestion and overall gut health.
+  </p>
+  <p>
+    Fresh pineapple works better than canned pineapple because heat can reduce enzyme activity.
+    Bromelain may help break down gluten, although more scientific research is still needed.
+  </p>
+</section>
+
+<section id="ginger">
+  <h2>Ginger</h2>
+  <p>
+    Ginger improves digestion by reducing gas and helping food move more efficiently through the digestive tract.
+    It does not break down gluten directly.
+  </p>
+  <p>
+    Ginger helps relieve symptoms such as nausea, bloating, and stomach cramps.
+    It is naturally gluten-free and generally safe for people with gluten sensitivity.
+  </p>
+</section>
+
+<section id="turmeric">
+  <h2>Turmeric</h2>
+  <p>
+    Turmeric contains <strong>curcumin</strong>, a compound known for reducing inflammation and supporting balanced gut bacteria.
+    It helps protect the gut lining and supports digestion.
+  </p>
+  <p>
+    Turmeric may help ease symptoms of gluten intolerance, but it does not break down gluten directly.
+  </p>
+</section>
+
+<section id="aloe">
+  <h2>Aloe Vera</h2>
+  <p>
+    Aloe Vera has strong anti-inflammatory properties and helps soothe the digestive system.
+    It may reduce abdominal pain and discomfort.
+  </p>
+  <p>
+    Aloe Vera can support healthy gut bacteria and improve nutrient absorption.
+    While it may ease discomfort after gluten exposure, it is not a cure for gluten intolerance.
+  </p>
+</section>
+
+<section id="experiment">
+  <h2>My Science Experiment</h2>
+
+  <p>
+    I tested natural extracts to see if they could help break down gluten using
+    lab methods and protein test strips. Here are my findings:
+  </p>
+
+  <h3>Key Findings</h3>
+  <ul>
+    <li><strong>Best breakdown:</strong> Combo A (Pineapple + Ginger + Aloe).</li>
+    <li>Pineapple and papaya were strong due to enzymes <strong>bromelain</strong> and <strong>papain</strong>.</li>
+    <li>Ginger alone showed minimal gluten breakdown.</li>
+  </ul>
+
+  <h3>Methodology: How I Made and Tested the Gluten Samples</h3>
+
+  <h4>Step 1: Dough Formation</h4>
+  <ul>
+    <li><strong>Materials Needed:</strong> 100 g all-purpose flour, 60 mL distilled water</li>
+    <li>Measured 100 g of flour using a digital scale.</li>
+    <li>Added 60 mL of distilled water using a graduated cylinder.</li>
+    <li>Combined flour and water in a bowl.</li>
+    <li>Mixed and kneaded (with gloves) until a uniform, soft dough formed.</li>
+    <li>Covered and rested dough for 15-30 minutes to allow gluten development.</li>
+  </ul>
+
+  <h4>Step 2: Starch Washing</h4>
+  <ul>
+    <li><strong>Materials Needed:</strong> 300 mL distilled water (repeated)</li>
+    <li>Placed dough into a bowl and added 300 mL distilled water.</li>
+    <li>Gently kneaded to release starch.</li>
+    <li>Poured off milky starch water after 1-2 minutes.</li>
+    <li>Repeated washing 4-6 times until water became mostly clear.</li>
+    <li>Remaining rubbery mass was isolated gluten.</li>
+  </ul>
+
+  <h4>Step 3: Collecting and Drying the Gluten</h4>
+  <ul>
+    <li>Gently squeezed gluten to remove excess water.</li>
+    <li>Optional: Spread gluten on a clean tray or Petri dish.</li>
+    <li>Air-dried for 24-48 hours or oven-dried below 50 degrees C.</li>
+  </ul>
+
+  <h4>Step 4: Treating with Natural Extracts</h4>
+  <ul>
+    <li>Cut dried gluten into approximately 1 g pieces.</li>
+    <li>Placed one piece into each Petri dish.</li>
+    <li>Added 2 mL of extract or combination mixture.</li>
+    <li>Left samples at room temperature for several hours to allow enzyme reactions.</li>
+  </ul>
+
+  <h4>Step 5: Testing Gluten Breakdown</h4>
+  <ul>
+    <li>Used protein test strips to measure gluten levels.</li>
+    <li>Compared strip color to reference chart:</li>
+    <ul>
+      <li><strong>Green / Yellow:</strong> Low Gluten (0.3 g/L)</li>
+      <li><strong>Moderate Green:</strong> 1-3 g/L</li>
+      <li><strong>Dark:</strong> High Gluten (10+ g/L)</li>
+    </ul>
+  </ul>
+
+  <img src="../Papaya Procedure.PNG" class="project-img" alt="Making the Papaya Extract">
+</section>
+
+<section id="results">
+  <h2>Results &amp; Observations</h2>
+  <ul>
+    <li>Best breakdown: Pineapple + Ginger + Aloe</li>
+    <li>Pineapple and papaya strongest individually</li>
+    <li>Ginger weakest alone</li>
+  </ul>
+  <img src="../Gluten Levels Table.PNG" class="project-img" alt="Gluten Levels Table">
+  <img src="../Analysis Gluten Levels.PNG" class="project-img" alt="Analysis of Gluten Levels">
+</section>
+
+<!-- TEST YOUR COMBO (integrated from combo.html) -->
+<section id="combo">
+  <h2>Test Your Extract Combination</h2>
+  <p><strong>Interactive Prediction Tool Based on Experimental Data</strong></p>
+
+  <p>
+    Select up to three natural extracts and click <strong>Predict</strong>
+    to see an estimated gluten level based on my experimental data.
+  </p>
+
+  <p>
+    If you select one of the exact combinations I tested in my experiment
+    (Combo A, B, or C), the tool will display the
+    <strong>real measured value</strong> from my lab results.
+    Other combinations are estimated using single-extract data and
+    simple synergy rules described below.
+  </p>
+
+  <details>
+    <summary><strong>How the Prediction Works</strong></summary>
+
+    <h4>Exact Tested Combinations (Measured Values)</h4>
+    <ul>
+      <li><strong>Combo A</strong> (Pineapple + Ginger + Aloe): 0.3 g/L</li>
+      <li><strong>Combo B</strong> (Papaya + Turmeric + Ginger): 1.2 g/L</li>
+      <li><strong>Combo C</strong> (Papaya + Pineapple + Ginger): 1.0 g/L</li>
+    </ul>
+
+    <h4>Single-Extract Measured Values</h4>
+    <ul>
+      <li>Pineapple: 0.3 g/L</li>
+      <li>Papaya: 1.1 g/L</li>
+      <li>Ginger: 10 g/L (very little gluten breakdown)</li>
+      <li>Turmeric: 1.0 g/L</li>
+      <li>Aloe Vera: 0.3 g/L</li>
+    </ul>
+
+    <h4>Synergy Adjustments</h4>
+    <ul>
+      <li>
+        Papaya + Pineapple together &rarr;
+        multiply the estimated value by <strong>0.7</strong>
+        (extra enzyme activity)
+      </li>
+      <li>
+        Including Aloe Vera &rarr;
+        subtract <strong>0.1 g/L</strong>
+        (soothing / dilution effect)
+      </li>
+      <li>
+        <strong>Minimum possible value:</strong> 0.3 g/L
+        (protein strip detection limit)
+      </li>
+    </ul>
+  </details>
+
+  <hr style="margin:30px 0;">
+
+  <form id="combo-form">
+    <label><input type="checkbox" value="pineapple"> Pineapple</label><br>
+    <label><input type="checkbox" value="papaya"> Papaya</label><br>
+    <label><input type="checkbox" value="ginger"> Ginger</label><br>
+    <label><input type="checkbox" value="turmeric"> Turmeric</label><br>
+    <label><input type="checkbox" value="aloe"> Aloe Vera</label><br><br>
+
+    <button type="button" onclick="predictCombo()">Predict</button>
+    <button type="button" onclick="resetCombo()">Clear</button>
+  </form>
+
+  <div id="combo-result">
+    <p id="combo-names"></p>
+    <p><strong>Gluten Level:</strong> <span id="combo-value"></span> g/L</p>
+    <div id="combo-color"></div>
+    <p id="combo-interpret"></p>
+    <p id="combo-explain"></p>
+  </div>
+</section>
+
+<section id="faq">
+  <h2>FAQ</h2>
+  <p><strong>Does this cure gluten intolerance?</strong> No.</p>
+  <p><strong>Is this a replacement for gluten-free diets?</strong> No.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Have a question or feedback? Click below to email me!</p>
+  <p>
+    <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRlQZBBBRBFMVlTQlBMDVSWTSlPjSDfXrFmcVBNGmbDNMKQCFlDWqmKgcgMLlvGxvppLgXQ"
+       style="display:inline-block; margin-top:15px; padding:12px 26px; background:var(--green); color:white; border-radius:25px; font-weight:bold; text-decoration:none;">
+      Email Me
+    </a>
+  </p>
+  <p style="margin-top:10px; font-size:0.9em; color:#555;">Recipient: karenhuang0312@gmail.com</p>
+</section>
+
+<footer>&copy; 2025 Nature's Remedy – Educational Science Project</footer>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
