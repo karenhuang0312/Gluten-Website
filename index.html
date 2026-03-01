@@ -219,6 +219,79 @@ footer {
   padding: 20px;
   background: var(--yellow);
 }
+
+/* DROPDOWN NAV */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  color: var(--text);
+  font-weight: bold;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 240px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.dropdown-content a:hover {
+  background: var(--light-green);
+  color: var(--dark-green);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.fact-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.fact-card {
+  background: #e8f9f0;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-left: 6px solid #4a9c5d;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.split-compare {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.compare-box {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  background: #f0fff7;
+  border-radius: 14px;
+  border: 2px solid #4a9c5d;
+}
 </style>
 </head>
 
@@ -255,12 +328,6 @@ footer {
   </div>
 </div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nature’s Remedy – Gluten Support</title>
 
 <style>
 :root {
@@ -422,7 +489,15 @@ footer {
 </header>
 
 <nav>
-    <a href="#about">About Gluten</a>
+<div class="dropdown">
+  <a href="#" class="dropbtn">About Gluten ▾</a>
+  <div class="dropdown-content">
+    <a href="about-intolerance.html">About Gluten Intolerance</a>
+    <a href="gluten-facts.html">Gluten & Celiac Facts</a>
+    <a href="genetics.html">Genetics & Ethnicity</a>
+    <a href="nature-vs-genetics.html">Nature vs Genetics</a>
+  </div>
+</div>
     <a href="#remedies">Extracts</a>
     <a href="#experiment">Experiment</a>
     <a href="#results">Results</a>
@@ -432,10 +507,72 @@ footer {
 </nav>
 
 <section id="about">
-<h2>About Gluten Intolerance</h2>
-<p>Gluten is a protein found in wheat, barley, and rye. Some people have difficulty digesting gluten, which can cause bloating, stomach pain, fatigue, and headaches.</p>
-<p>Celiac disease is an autoimmune disorder where gluten damages the small intestine, while non-celiac gluten sensitivity causes symptoms without permanent intestinal damage.</p>
-<img src="Gluten Intolerance vs. Celiac Disease.webp" class="project-img">
+
+  <!-- 1) About Gluten Intolerance -->
+  <div id="about-intolerance">
+    <h2>About Gluten Intolerance</h2>
+    <p>Gluten is a protein found in wheat, barley, and rye. Some people have difficulty digesting gluten, which can cause bloating, stomach pain, fatigue, and headaches.</p>
+    <p>Celiac disease is an autoimmune disorder where gluten damages the small intestine, while non-celiac gluten sensitivity causes symptoms without permanent intestinal damage.</p>
+    <img src="Gluten Intolerance vs. Celiac Disease.webp" class="project-img">
+  </div>
+
+  <!-- 2) Gluten & Celiac Facts -->
+  <div id="about-facts" style="margin-top:50px;">
+    <h2>Gluten & Celiac Facts</h2>
+    <div class="fact-card-grid">
+      <div class="fact-card">Celiac disease affects 1 in 100 people worldwide.</div>
+      <div class="fact-card">3 million Americans have celiac disease — many undiagnosed.</div>
+      <div class="fact-card">The only treatment is a strict gluten-free diet.</div>
+      <div class="fact-card">Cross-contact can trigger reactions even in tiny amounts.</div>
+      <div class="fact-card">Gluten intolerance is different from celiac disease.</div>
+      <div class="fact-card">Natural enzymes like bromelain & papain help break down proteins.</div>
+    </div>
+  </div>
+
+  <!-- 3) Genetics & Ethnicity -->
+  <div id="about-genetics" style="margin-top:50px;">
+    <h2>Genetics & Ethnicity</h2>
+    <p>
+      Celiac disease is linked to two genes: <b>HLA-DQ2</b> and <b>HLA-DQ8</b>.
+      These occur more often in certain populations due to:
+    </p>
+    <ul>
+      <li><b>Genetic bottlenecks</b> — small populations passing on shared traits</li>
+      <li><b>Endogamy</b> — marrying within the same community for generations</li>
+    </ul>
+    <p>
+      Some groups (like Ashkenazi Jewish communities) have higher frequencies of these genes.
+      Many Asian populations have lower rates, so celiac is less common there.
+      <br><br>
+      <b>Anyone can get celiac — genetics set the starting risk.</b>
+    </p>
+  </div>
+
+  <!-- 4) Nature vs Genetics -->
+  <div id="about-nature" style="margin-top:50px;">
+    <h2>Nature vs Genetics</h2>
+
+    <div class="split-compare">
+      <div class="compare-box">
+        <h3>🌴 Person A — Hawaii</h3>
+        <ul>
+          <li>Eats pineapple, papaya, ginger</li>
+          <li>High natural enzyme intake</li>
+          <li>May digest gluten more comfortably</li>
+        </ul>
+      </div>
+
+      <div class="compare-box">
+        <h3>❄️ Person B — Finland</h3>
+        <ul>
+          <li>Eats fewer tropical fruits</li>
+          <li>Lower natural enzyme intake</li>
+          <li>May feel stronger irritation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <section id="remedies">
@@ -680,10 +817,6 @@ simple synergy rules described below.
 </div>
 
 <script>
-function enterSite(){
-  document.getElementById("landing").style.display="none";
-  document.getElementById("main").style.display="block";
-}
 
 const singleLevels={ pineapple:0.3, papaya:1.1, ginger:10, turmeric:1.0, aloe:0.3 };
 
@@ -738,7 +871,6 @@ function resetCombo(){
 </script>
 
 </body>
-</html>
 
 <div id="main">
   <!-- (ALL your existing sections remain unchanged — not repeated here for space) -->
