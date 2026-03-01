@@ -21,36 +21,122 @@ body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
+  scroll-behavior: smooth;
 }
 
-#landing {
+/* -------------------------- */
+/* NEW SPLIT WELCOME SECTION  */
+/* -------------------------- */
+
+#welcome {
   height: 100vh;
-  background: linear-gradient(135deg, var(--green), var(--yellow));
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 40px;
+  padding: 0 8%;
+  background: linear-gradient(135deg, var(--green), var(--yellow));
+  color: white;
 }
 
-#landing h1 { font-size: 3.3em; }
-#landing p { font-size: 1.3em; max-width: 550px; }
+#welcome-left {
+  width: 50%;
+  padding-right: 40px;
+}
 
-#landing button {
-  margin-top: 30px;
+#welcome-left h1 {
+  font-size: 3.2rem;
+  margin-bottom: 15px;
+}
+
+#welcome-left p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  max-width: 480px;
+}
+
+#welcome-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-card {
+  width: 85%;
+  background: var(--card);
+  color: var(--text);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideGlow 1.3s ease forwards;
+}
+
+@keyframes slideGlow {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+    box-shadow: 0 0 0 rgba(95,174,78,0);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(95,174,78,0.35);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 0 12px rgba(95,174,78,0.25);
+  }
+}
+
+#enter-btn {
+  margin-top: 25px;
   padding: 14px 34px;
-  font-size: 1.1em;
-  background: white;
-  color: var(--dark-green);
-  border: none;
   border-radius: 30px;
-  cursor: pointer;
+  background: var(--green);
+  color: white;
+  border: none;
+  font-size: 1.1rem;
   font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s ease;
 }
+
+#enter-btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 12px rgba(255,255,255,0.7),
+    0 0 16px rgba(255,255,255,0.4);
+}
+
+.didyouknow {
+  background: var(--light-green);
+  padding: 14px;
+  border-radius: 12px;
+  margin-top: 18px;
+  border-left: 6px solid var(--green);
+}
+
+/* ----------------------------- */
+/* ORIGINAL LANDING (NOW HIDDEN) */
+/* ----------------------------- */
+
+#landing { display: none; }
+
+/* ----------------------------- */
+/* MAIN PAGE STYLING (unchanged) */
+/* ----------------------------- */
 
 #main { display: none; }
 
+/* NAV HIGHLIGHT EFFECT */
+nav a.active {
+  background: var(--green);
+  color: white !important;
+  box-shadow: 0 0 20px rgba(95, 174, 78, 0.45);
+}
+
+/* Everything below is YOUR original CSS */
 header {
   background: linear-gradient(to right, var(--green), var(--yellow));
   padding: 30px;
@@ -68,6 +154,148 @@ nav {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+nav a {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  color: var(--text);
+  font-weight: bold;
+  transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  background: var(--green);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 10px rgba(95,174,78,0.6),
+    0 0 20px rgba(95,174,78,0.35);
+}
+
+section {
+  max-width: 1050px;
+  margin: 45px auto;
+  padding: 40px;
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--light-green);
+  padding: 22px;
+  border-radius: 16px;
+  transition: 0.3s;
+  text-decoration: none;
+  color: var(--text);
+  display: block;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  background: #f1fbef;
+  box-shadow:
+    0 0 12px rgba(95, 174, 78, 0.6),
+    0 0 28px rgba(95, 174, 78, 0.4),
+    0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.project-img {
+  max-width: 100%;
+  border-radius: 14px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--yellow);
+}
+</style>
+</head>
+
+<body>
+
+<!-- -------------------------------- -->
+<!-- NEW SPLIT WELCOME PAGE (OPTION C3) -->
+<!-- -------------------------------- -->
+<div id="welcome">
+  <div id="welcome-left">
+    <h1>Nature’s Remedy</h1>
+    <p><strong>A student science project exploring how natural plant extracts may help break down gluten.</strong></p>
+    <p>This website lets you learn about gluten sensitivity, explore different natural extracts, and even test your own extract combinations using my real experimental data.</p>
+  </div>
+
+  <div id="welcome-right">
+    <div class="welcome-card">
+      <h2>What This Website Offers</h2>
+      <ul>
+        <li>✔ Easy explanation of gluten intolerance</li>
+        <li>✔ Science-based plant extract profiles</li>
+        <li>✔ Photos of my real lab experiment</li>
+        <li>✔ Interactive “Test Your Combination” predictor</li>
+        <li>✔ Real measured gluten breakdown levels</li>
+      </ul>
+
+      <div class="didyouknow">
+        <strong>Did you know?</strong><br>
+        Bromelain (in pineapple) and papain (in papaya) are used in real digestive supplements.
+      </div>
+
+      <button id="enter-btn" onclick="enterSite()">Enter Project</button>
+    </div>
+  </div>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nature’s Remedy – Gluten Support</title>
+
+<style>
+:root {
+  --green: #5FAE4E;
+  --dark-green: #3F7F34;
+  --light-green: #EAF5E6;
+  --yellow: #F4D35E;
+  --bg: #F8FAF8;
+  --text: #2B2B2B;
+  --card: #FFFFFF;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  background: linear-gradient(to right, var(--green), var(--yellow));
+  padding: 30px;
+  text-align: center;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 nav a {
   text-decoration: none;
   padding: 10px 18px;
@@ -186,11 +414,6 @@ footer {
 </head>
 <body>
 
-<div id="landing">
-  <h1>Nature’s Remedy</h1>
-  <p>Evaluating natural plant extracts for gluten degradation</p>
-  <button onclick="enterSite()">Enter Project</button>
-</div>
 
 <div id="main">
 <header>
@@ -512,6 +735,40 @@ function resetCombo(){
   document.querySelectorAll('#combo-form input').forEach(c=>c.checked=false);
   document.getElementById('combo-result').style.display='none';
 }
+</script>
+
+</body>
+</html>
+
+<div id="main">
+  <!-- (ALL your existing sections remain unchanged — not repeated here for space) -->
+</div>
+
+<script>
+/* ---------- ENTER PROJECT ---------- */
+function enterSite(){
+  document.getElementById("welcome").style.display = "none";
+  document.getElementById("main").style.display = "block";
+}
+
+/* ---------- NAV ACTIVE SCROLL ---------- */
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(sec => {
+    const top = window.scrollY;
+    if (top >= sec.offsetTop - 200) current = sec.getAttribute("id");
+  });
+
+  navLinks.forEach(a => {
+    a.classList.remove("active");
+    if (a.getAttribute("href").includes(current)) {
+      a.classList.add("active");
+    }
+  });
+});
 </script>
 
 </body>
