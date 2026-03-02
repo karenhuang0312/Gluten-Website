@@ -419,6 +419,72 @@ footer {
   transform: translateY(-3px);
   box-shadow: 0 0 18px rgba(95,174,78,0.4);
 }
+
+/* ============================== */
+/* RESPONSIVE LAYOUT (MOBILE/TABLET)
+/* ============================== */
+@media (max-width: 900px) {
+  nav {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+    gap: 8px;
+  }
+
+  nav a,
+  .dropbtn {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+
+  #welcome {
+    flex-direction: column;
+    height: auto;
+    padding: 80px 6% 40px;
+    text-align: left;
+  }
+
+  #welcome-left,
+  #welcome-right {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  #welcome-right {
+    margin-top: 25px;
+  }
+
+  #welcome-left h1 {
+    font-size: 2.3rem;
+  }
+
+  #welcome-left p {
+    font-size: 1.02rem;
+    max-width: none;
+  }
+
+  section {
+    margin: 25px 12px;
+    padding: 24px 18px;
+  }
+
+  .research-hero {
+    padding: 60px 16px;
+  }
+
+  .research-hero h1 {
+    font-size: 2rem;
+  }
+
+  .research-subtitle {
+    font-size: 1rem;
+  }
+
+  #combo-form label {
+    display: block;
+    margin-right: 0;
+  }
+}
 </style>
 </head>
 
