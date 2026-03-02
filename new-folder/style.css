@@ -438,3 +438,14 @@ footer {
   padding: 20px;
   background: var(--yellow);
 }
+
+h3 {
+  margin-top: 30px;
+  color: #5FAE4E;
+  font-size: 22px;
+}
+
+section {
+  max-width: 850px;
+  margin: auto;
+}
