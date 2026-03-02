@@ -5,70 +5,252 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Genetics & Ethnicity</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
+
+/* ---------- THEME ---------- */
+:root{
+  --primary: #5FAE4E;
+  --dark: #2f5f2a;
+  --light-bg: #f4fbf6;
+  --card-bg: #ffffff;
+  --accent: #e6f5ea;
+}
+
+/* ---------- BODY ---------- */
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f8fffa;
+  background: linear-gradient(to bottom right, #f4fbf6, #ffffff);
   margin: 0;
-  padding: 40px;
+  padding: 0;
   color: #2B2B2B;
 }
 
-h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #3F7F34;
-}
-
-p {
-  font-size: 17px;
-  line-height: 1.6;
-  margin-bottom: 18px;
-}
-
-ul {
-  margin-bottom: 18px;
-}
-
-li {
-  margin-bottom: 8px;
+/* ---------- NAV ---------- */
+nav {
+  padding: 20px 40px;
 }
 
 nav a {
   text-decoration: none;
-  color: #3F7F34;
-  font-weight: bold;
+  color: var(--primary);
+  font-weight: 600;
+  transition: 0.3s;
 }
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px 80px 20px;
+}
+
+/* ---------- HEADINGS ---------- */
+h2 {
+  font-size: 38px;
+  color: var(--dark);
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 22px;
+  margin-top: 20px;
+  color: var(--primary);
+}
+
+/* ---------- PARAGRAPHS ---------- */
+p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* ---------- CARD ---------- */
+.card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 16px;
+  margin-top: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+/* ---------- INFO BOX ---------- */
+.highlight {
+  background: var(--accent);
+  padding: 18px;
+  border-left: 6px solid var(--primary);
+  border-radius: 10px;
+  margin-top: 25px;
+  font-weight: 500;
+}
+
+/* ---------- COLLAPSIBLE ---------- */
+.collapsible {
+  background: #ffffff;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 12px;
+  margin-top: 15px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.collapsible:hover {
+  background: var(--accent);
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 15px;
+}
+
+/* ---------- FADE ---------- */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 </style>
 </head>
+
 <body>
 
 <nav>
   <a href="index.html?home=true">← Back to Home</a>
 </nav>
 
-<section>
-  <h2>Genetics & Ethnicity</h2>
+<div class="container">
 
-  <p>
-    Celiac disease is linked to two genes: <b>HLA-DQ2</b> and <b>HLA-DQ8</b>.
-    These occur more often in certain populations due to:
-  </p>
+  <h2 class="fade">Genetics & Ethnicity in Celiac Disease</h2>
 
-  <ul>
-    <li><b>Genetic bottlenecks</b> — small populations passing shared traits</li>
-    <li><b>Endogamy</b> — marrying within the same community for generations</li>
-  </ul>
+  <div class="card fade">
+    <p>
+      Celiac disease is strongly associated with specific immune system genes:
+      <strong>HLA-DQ2</strong> and <strong>HLA-DQ8</strong>. These genes
+      encode proteins that help the immune system recognize foreign molecules.
+    </p>
 
-  <p>
-    Some groups (like Ashkenazi Jewish communities) have higher frequencies
-    of these genes. Many Asian populations have lower rates, so celiac is
-    less common there.
-  </p>
+    <p>
+      However, in genetically predisposed individuals, these proteins
+      mistakenly present gluten fragments to immune cells, triggering
+      an inflammatory response in the small intestine.
+    </p>
+  </div>
 
-  <p><b>Anyone can get celiac — genetics set the starting risk.</b></p>
+  <div class="highlight fade">
+    Approximately 30–40% of the global population carries HLA-DQ2 or HLA-DQ8,
+    but only about 1% develop celiac disease.
+    <br><br>
+    Genetics increase susceptibility — they do not guarantee disease.
+  </div>
 
-</section>
+  <button class="collapsible fade">🧬 Why Do Some Ethnic Groups Have Higher Rates?</button>
+  <div class="content">
+    <p>
+      Certain populations show higher frequencies of HLA-DQ2 and HLA-DQ8
+      due to historical genetic patterns.
+    </p>
+    <ul>
+      <li><strong>Genetic Bottlenecks:</strong> Small ancestral populations
+      passing shared gene variants forward.</li>
+      <li><strong>Endogamy:</strong> Marrying within a community for
+      generations, preserving specific genetic traits.</li>
+      <li><strong>Founder Effects:</strong> When a small group establishes
+      a population carrying specific gene variations.</li>
+    </ul>
+  </div>
+
+  <button class="collapsible fade">🌍 Global Distribution Patterns</button>
+  <div class="content">
+    <p>
+      Celiac disease is historically more common in populations of European
+      descent, including some Ashkenazi Jewish communities.
+    </p>
+
+    <p>
+      Many East Asian populations show lower frequencies of HLA-DQ2/DQ8,
+      resulting in lower diagnosed rates. However, globalization and
+      dietary changes are increasing awareness worldwide.
+    </p>
+  </div>
+
+  <div class="card fade">
+    <h3>Key Scientific Insight</h3>
+    <p>
+      Genetics establish baseline susceptibility, but environmental
+      exposure (gluten consumption), gut microbiome composition,
+      immune regulation, and additional genes influence whether
+      disease develops.
+    </p>
+
+    <p>
+      This genetic context is important when exploring alternative
+      digestive support strategies — as enzyme-based approaches may
+      assist individuals with mild sensitivity but cannot prevent
+      autoimmune activation in genetically susceptible individuals.
+    </p>
+  </div>
+
+</div>
+
+<script>
+
+/* Scroll fade */
+const fades = document.querySelectorAll(".fade");
+
+const revealOnScroll = () => {
+  fades.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 100){
+      el.classList.add("show");
+    }
+  });
+};
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+
+/* Collapsible sections */
+const coll = document.querySelectorAll(".collapsible");
+
+coll.forEach(btn => {
+  btn.addEventListener("click", function() {
+    this.classList.toggle("active");
+    const content = this.nextElementSibling;
+
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+});
+
+</script>
 
 </body>
 </html>
