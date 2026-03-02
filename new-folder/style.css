@@ -14,9 +14,13 @@ body {
   background: var(--bg);
   color: var(--text);
   scroll-behavior: smooth;
+  padding-top: 60px;
 }
 
-/* NAV BAR - FIXED AT TOP */
+/* ============================== */
+/* NAV BAR - FIXED AT TOP         */
+/* ============================== */
+
 nav {
   position: fixed;
   top: 0;
@@ -49,14 +53,16 @@ nav a:hover {
     0 0 20px rgba(95,174,78,0.35);
 }
 
-/* NAV HIGHLIGHT EFFECT */
 nav a.active {
   background: var(--green);
   color: white !important;
   box-shadow: 0 0 20px rgba(95, 174, 78, 0.45);
 }
 
-/* DROPDOWN NAV */
+/* ============================== */
+/* DROPDOWN NAV                   */
+/* ============================== */
+
 .dropdown {
   position: relative;
 }
@@ -98,12 +104,10 @@ nav a.active {
   display: block;
 }
 
-/* ADD PADDING TO BODY TO ACCOUNT FOR FIXED NAV */
-body {
-  padding-top: 60px;
-}
+/* ============================== */
+/* WELCOME / LANDING SECTION      */
+/* ============================== */
 
-/* SPLIT WELCOME SECTION */
 #welcome {
   height: 100vh;
   display: flex;
@@ -195,8 +199,11 @@ body {
   border-left: 6px solid var(--green);
 }
 
-#landing { display: none; }
+/* ============================== */
+/* MAIN CONTENT AREA              */
+/* ============================== */
 
+#landing { display: none; }
 #main { display: none; }
 
 header {
@@ -215,6 +222,10 @@ section {
 }
 
 h2 { color: var(--dark-green); }
+
+/* ============================== */
+/* EXTRACT CARDS                  */
+/* ============================== */
 
 .card-grid {
   display: grid;
@@ -251,12 +262,20 @@ h2 { color: var(--dark-green); }
   color: var(--text);
 }
 
+/* ============================== */
+/* PROJECT IMAGES                 */
+/* ============================== */
+
 .project-img {
   max-width: 100%;
   border-radius: 14px;
   border: 1px solid #ccc;
   margin-top: 20px;
 }
+
+/* ============================== */
+/* TEST YOUR COMBO SECTION        */
+/* ============================== */
 
 #combo-result {
   display: none;
@@ -272,6 +291,44 @@ h2 { color: var(--dark-green); }
   border-radius: 6px;
   border: 1px solid #999;
 }
+
+#combo-form label {
+  display: inline-block;
+  margin: 6px 14px 6px 0;
+  font-size: 1.05rem;
+}
+
+#combo-form button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: var(--green);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 8px;
+}
+
+#combo-form button:hover {
+  background: var(--dark-green);
+}
+
+#combo details {
+  margin-top: 20px;
+  padding: 15px;
+  background: var(--light-green);
+  border-radius: 12px;
+}
+
+#combo details summary {
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+/* ============================== */
+/* FACT CARDS / COMPARE           */
+/* ============================== */
 
 .fact-card-grid {
   display: grid;
@@ -304,14 +361,8 @@ h2 { color: var(--dark-green); }
   border: 2px solid #4a9c5d;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background: var(--yellow);
-}
-
 /* ============================== */
-/* SCIENCE FAIR HERO SECTION */
+/* RESEARCH HERO SECTION          */
 /* ============================== */
 
 .research-hero {
@@ -378,10 +429,12 @@ footer {
   box-shadow: 0 0 18px rgba(95,174,78,0.4);
 }
 
-.research-footer {
+/* ============================== */
+/* FOOTER                         */
+/* ============================== */
+
+footer {
   text-align: center;
-  padding: 40px 20px;
-  background: #f0f7ed;
-  font-size: 0.9rem;
-  color: #555;
+  padding: 20px;
+  background: var(--yellow);
 }
