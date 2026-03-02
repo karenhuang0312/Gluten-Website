@@ -6,44 +6,125 @@
 <title>Nature vs Genetics</title>
 
 <style>
+
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f8fffa;
+  background: linear-gradient(135deg, #f4fff8, #e7f7ef);
   margin: 0;
   padding: 40px;
   color: #2B2B2B;
 }
 
-h2 {
-  font-size: 32px;
-  margin-bottom: 25px;
-  color: #3F7F34;
-}
-
-.split-compare {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.compare-box {
-  flex: 1;
-  min-width: 250px;
-  padding: 20px;
-  background: #f0fff7;
-  border-radius: 14px;
-  border: 2px solid #4a9c5d;
-}
-
-.compare-box h3 {
-  margin-bottom: 12px;
+/* Navigation */
+nav {
+  margin-bottom: 30px;
 }
 
 nav a {
   text-decoration: none;
   color: #3F7F34;
   font-weight: bold;
+  font-size: 15px;
+  transition: 0.3s;
 }
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+/* Title */
+h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+  color: #2e6f3e;
+  text-align: center;
+}
+
+/* Layout */
+.split-compare {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* Cards */
+.compare-box {
+  flex: 1;
+  min-width: 280px;
+  padding: 25px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-top: 6px solid #4a9c5d;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.compare-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.15);
+}
+
+.compare-box h3 {
+  margin-bottom: 15px;
+  color: #3F7F34;
+}
+
+.compare-box ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.compare-box li {
+  margin-bottom: 8px;
+}
+
+/* Hidden expanded explanation */
+.extra-info {
+  display: none;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-top: 10px;
+  color: #444;
+}
+
+.compare-box.active .extra-info {
+  display: block;
+}
+
+/* Risk meter */
+.risk-bar {
+  height: 8px;
+  background: #ddd;
+  border-radius: 10px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+.risk-fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.low-risk {
+  width: 40%;
+  background: linear-gradient(to right, #5ac87d, #2e9c55);
+}
+
+.high-risk {
+  width: 70%;
+  background: linear-gradient(to right, #e6b800, #d96b00);
+}
+
+/* Footer */
+.footer-note {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
 </style>
 </head>
 <body>
@@ -53,31 +134,71 @@ nav a {
 </nav>
 
 <section>
-  <h2>Nature vs Genetics</h2>
+  <h2>Nature vs Genetics: Environmental Influence on Gluten Response</h2>
 
   <div class="split-compare">
 
-    <div class="compare-box">
-      <h3>🌴 Person A — Hawaii</h3>
+    <!-- Person A -->
+    <div class="compare-box" onclick="toggleBox(this)">
+      <h3>🌴 Person A — Tropical Environment</h3>
+
       <ul>
-        <li>Eats pineapple, papaya, ginger</li>
-        <li>High natural enzyme intake</li>
-        <li>May digest gluten more comfortably</li>
+        <li>Regular intake of pineapple (bromelain)</li>
+        <li>Regular intake of papaya (papain)</li>
+        <li>Higher exposure to anti-inflammatory plant compounds</li>
+        <li>Diverse gut microbiome from high-fiber diet</li>
       </ul>
+
+      <div class="risk-bar">
+        <div class="risk-fill low-risk"></div>
+      </div>
+
+      <div class="extra-info">
+        Research suggests that bromelain and papain are proteolytic enzymes,
+        meaning they break down proteins. In theory, increased exposure to
+        natural enzymes could assist partial gluten protein breakdown before
+        immune activation occurs. Environmental diet may influence gut
+        microbiome composition, which plays a role in immune regulation.
+      </div>
     </div>
 
-    <div class="compare-box">
-      <h3>❄️ Person B — Finland</h3>
+    <!-- Person B -->
+    <div class="compare-box" onclick="toggleBox(this)">
+      <h3>❄️ Person B — Northern Environment</h3>
+
       <ul>
-        <li>Eats fewer tropical fruits</li>
-        <li>Lower natural enzyme intake</li>
-        <li>May feel stronger irritation</li>
+        <li>Lower intake of natural proteolytic fruits</li>
+        <li>Higher wheat-based dietary staples</li>
+        <li>Less dietary enzyme diversity</li>
+        <li>Different gut microbiome exposure patterns</li>
       </ul>
+
+      <div class="risk-bar">
+        <div class="risk-fill high-risk"></div>
+      </div>
+
+      <div class="extra-info">
+        Populations with high wheat consumption and lower natural enzyme
+        intake may experience increased exposure to intact gluten proteins.
+        If genetically predisposed (HLA-DQ2 or HLA-DQ8), immune activation
+        may occur more readily. However, genetics remains the primary risk
+        factor — environment modifies expression.
+      </div>
     </div>
 
   </div>
 
+  <div class="footer-note">
+    Click each profile to explore how environment may interact with genetic predisposition.
+  </div>
+
 </section>
+
+<script>
+function toggleBox(box) {
+  box.classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
