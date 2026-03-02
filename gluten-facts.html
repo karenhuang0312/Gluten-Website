@@ -11,20 +11,26 @@ body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #f4fff8, #e9f7ef);
   margin: 0;
-  padding: 40px;
+  padding: 50px;
   color: #2B2B2B;
+}
+
+/* Center section nicely */
+section {
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* Navigation */
 nav {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 nav a {
   text-decoration: none;
   color: #3F7F34;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 16px;
   transition: 0.3s;
 }
 
@@ -34,63 +40,87 @@ nav a:hover {
 
 /* Title */
 h2 {
-  font-size: 34px;
-  margin-bottom: 30px;
+  font-size: 38px;
+  margin-bottom: 50px;
   color: #2e6f3e;
   text-align: center;
 }
 
-/* Grid */
+/* FORCE 3x2 GRID */
 .fact-card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .fact-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .fact-card-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Cards */
 .fact-card {
   background: white;
-  padding: 22px;
-  border-radius: 16px;
-  border-top: 5px solid #4a9c5d;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  padding: 28px;
+  border-radius: 20px;
+  border-top: 6px solid #4a9c5d;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
+  transition: all 0.35s ease;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
 }
 
 .fact-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.15);
 }
 
 .fact-card h4 {
-  margin: 0 0 10px 0;
+  margin: 0 0 12px 0;
+  font-size: 18px;
   color: #3F7F34;
 }
 
-.fact-card p {
+/* Always visible preview */
+.preview {
   font-size: 15px;
   line-height: 1.5;
-  display: none;
-  margin-top: 10px;
+  opacity: 0.9;
 }
 
-/* Active state when clicked */
-.fact-card.active p {
-  display: block;
+/* Hidden expanded text */
+.full-text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 12px;
+  display: none;
+  color: #444;
 }
 
 .fact-card.active {
   background: #f0fff5;
 }
 
-/* Footer note */
+.fact-card.active .full-text {
+  display: block;
+}
+
+/* Footer */
 .footer-note {
   text-align: center;
-  margin-top: 40px;
-  font-size: 14px;
-  color: #4a4a4a;
+  margin-top: 60px;
+  font-size: 15px;
   opacity: 0.8;
 }
 
@@ -103,54 +133,81 @@ h2 {
 </nav>
 
 <section>
-  <h2>Gluten & Celiac Disease: Key Scientific Facts</h2>
+
+  <h2>Gluten & Celiac Disease: Scientific Overview</h2>
 
   <div class="fact-card-grid">
 
     <div class="fact-card" onclick="toggleCard(this)">
       <h4>🌍 Global Prevalence</h4>
-      <p>Celiac disease affects approximately 1 in 100 people worldwide, though many cases remain undiagnosed due to mild or atypical symptoms.</p>
+      <div class="preview">
+        Celiac disease affects roughly 1% of the global population.
+      </div>
+      <div class="full-text">
+        Many individuals remain undiagnosed due to mild or atypical symptoms.
+        Rates are highest in Europe and North America but are rising globally.
+      </div>
     </div>
 
     <div class="fact-card" onclick="toggleCard(this)">
-      <h4>🇺🇸 U.S. Statistics</h4>
-      <p>Nearly 3 million Americans are estimated to have celiac disease, but up to 80% may be undiagnosed.</p>
+      <h4>🧬 Genetic Requirement</h4>
+      <div class="preview">
+        Most patients carry HLA-DQ2 or HLA-DQ8 genes.
+      </div>
+      <div class="full-text">
+        Around 30–40% of people have these genes, but only a small percentage
+        develop celiac disease, showing that environmental triggers matter.
+      </div>
     </div>
 
     <div class="fact-card" onclick="toggleCard(this)">
-      <h4>🧬 Genetic Link</h4>
-      <p>The HLA-DQ2 and HLA-DQ8 genes are present in nearly all individuals with celiac disease, but having the gene does not guarantee developing the condition.</p>
+      <h4>⚠ Autoimmune Response</h4>
+      <div class="preview">
+        Gluten triggers immune destruction of intestinal villi.
+      </div>
+      <div class="full-text">
+        This damages nutrient absorption and may lead to anemia, bone density
+        loss, vitamin deficiencies, and chronic inflammation.
+      </div>
     </div>
 
     <div class="fact-card" onclick="toggleCard(this)">
-      <h4>⚠ Autoimmune Reaction</h4>
-      <p>Celiac disease is an autoimmune disorder. Gluten ingestion triggers immune cells to attack the small intestine’s villi, impairing nutrient absorption.</p>
+      <h4>🥖 Gluten Structure</h4>
+      <div class="preview">
+        Gluten is composed of gliadin and glutenin proteins.
+      </div>
+      <div class="full-text">
+        Gliadin peptides resist complete digestion, increasing the likelihood
+        of immune activation in genetically susceptible individuals.
+      </div>
     </div>
 
     <div class="fact-card" onclick="toggleCard(this)">
-      <h4>🥖 Gluten Composition</h4>
-      <p>Gluten is made of two main proteins: gliadin and glutenin. Gliadin is primarily responsible for triggering immune reactions in celiac disease.</p>
-    </div>
-
-    <div class="fact-card" onclick="toggleCard(this)">
-      <h4>🍽 Treatment</h4>
-      <p>The only current treatment is a lifelong strict gluten-free diet. Even small traces of gluten can trigger intestinal damage.</p>
+      <h4>🧠 Systemic Symptoms</h4>
+      <div class="preview">
+        Symptoms extend beyond the digestive tract.
+      </div>
+      <div class="full-text">
+        Neurological effects, fatigue, headaches, joint pain, and skin
+        conditions such as dermatitis herpetiformis are documented.
+      </div>
     </div>
 
     <div class="fact-card" onclick="toggleCard(this)">
       <h4>🔬 Enzyme Research</h4>
-      <p>Proteolytic enzymes such as bromelain (from pineapple) and papain (from papaya) are being studied for their potential ability to break down gluten proteins.</p>
-    </div>
-
-    <div class="fact-card" onclick="toggleCard(this)">
-      <h4>🧠 Symptoms Beyond Digestion</h4>
-      <p>Symptoms may include fatigue, anemia, headaches, joint pain, and neurological effects — not just digestive discomfort.</p>
+      <div class="preview">
+        Scientists are studying protein-digesting enzymes.
+      </div>
+      <div class="full-text">
+        Bromelain and papain show potential gluten-breaking properties in
+        laboratory studies, though they are not approved medical treatments.
+      </div>
     </div>
 
   </div>
 
   <div class="footer-note">
-    Click each card to explore detailed scientific insights.
+    Click each card to expand detailed scientific explanations.
   </div>
 
 </section>
