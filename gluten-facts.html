@@ -6,40 +6,94 @@
 <title>Gluten & Celiac Facts</title>
 
 <style>
+
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f8fffa;
+  background: linear-gradient(135deg, #f4fff8, #e9f7ef);
   margin: 0;
   padding: 40px;
   color: #2B2B2B;
 }
 
-h2 {
-  font-size: 32px;
-  margin-bottom: 25px;
-  color: #3F7F34;
-}
-
-.fact-card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.fact-card {
-  background: #e8f9f0;
-  padding: 20px;
-  border-radius: 14px;
-  border-left: 6px solid #4a9c5d;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  line-height: 1.4;
+/* Navigation */
+nav {
+  margin-bottom: 30px;
 }
 
 nav a {
   text-decoration: none;
   color: #3F7F34;
   font-weight: bold;
+  font-size: 15px;
+  transition: 0.3s;
 }
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+/* Title */
+h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+  color: #2e6f3e;
+  text-align: center;
+}
+
+/* Grid */
+.fact-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+/* Cards */
+.fact-card {
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  border-top: 5px solid #4a9c5d;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.fact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.fact-card h4 {
+  margin: 0 0 10px 0;
+  color: #3F7F34;
+}
+
+.fact-card p {
+  font-size: 15px;
+  line-height: 1.5;
+  display: none;
+  margin-top: 10px;
+}
+
+/* Active state when clicked */
+.fact-card.active p {
+  display: block;
+}
+
+.fact-card.active {
+  background: #f0fff5;
+}
+
+/* Footer note */
+.footer-note {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #4a4a4a;
+  opacity: 0.8;
+}
+
 </style>
 </head>
 <body>
@@ -49,18 +103,63 @@ nav a {
 </nav>
 
 <section>
-  <h2>Gluten & Celiac Facts</h2>
+  <h2>Gluten & Celiac Disease: Key Scientific Facts</h2>
 
   <div class="fact-card-grid">
-    <div class="fact-card">Celiac disease affects 1 in 100 people worldwide.</div>
-    <div class="fact-card">3 million Americans have celiac disease — many undiagnosed.</div>
-    <div class="fact-card">The only treatment is a strict gluten-free diet.</div>
-    <div class="fact-card">Cross-contact can trigger reactions even in tiny amounts.</div>
-    <div class="fact-card">Gluten intolerance is different from celiac disease.</div>
-    <div class="fact-card">Natural enzymes like bromelain & papain help break down proteins.</div>
+
+    <div class="fact-card" onclick="toggleCard(this)">
+      <h4>🌍 Global Prevalence</h4>
+      <p>Celiac disease affects approximately 1 in 100 people worldwide, though many cases remain undiagnosed due to mild or atypical symptoms.</p>
+    </div>
+
+    <div class="fact-card" onclick="toggleCard(this)">
+      <h4>🇺🇸 U.S. Statistics</h4>
+      <p>Nearly 3 million Americans are estimated to have celiac disease, but up to 80% may be undiagnosed.</p>
+    </div>
+
+    <div class="fact-card" onclick="toggleCard(this)">
+      <h4>🧬 Genetic Link</h4>
+      <p>The HLA-DQ2 and HLA-DQ8 genes are present in nearly all individuals with celiac disease, but having the gene does not guarantee developing the condition.</p>
+    </div>
+
+    <div class="fact-card" onclick="toggleCard(this)">
+      <h4>⚠ Autoimmune Reaction</h4>
+      <p>Celiac disease is an autoimmune disorder. Gluten ingestion triggers immune cells to attack the small intestine’s villi, impairing nutrient absorption.</p>
+    </div>
+
+    <div class="fact-card" onclick="toggleCard(this)">
+      <h4>🥖 Gluten Composition</h4>
+      <p>Gluten is made of two main proteins: gliadin and glutenin. Gliadin is primarily responsible for triggering immune reactions in celiac disease.</p>
+    </div>
+
+    <div class="fact-card" onclick="toggleCard(this)">
+      <h4>🍽 Treatment</h4>
+      <p>The only current treatment is a lifelong strict gluten-free diet. Even small traces of gluten can trigger intestinal damage.</p>
+    </div>
+
+    <div class="fact-card" onclick="toggleCard(this)">
+      <h4>🔬 Enzyme Research</h4>
+      <p>Proteolytic enzymes such as bromelain (from pineapple) and papain (from papaya) are being studied for their potential ability to break down gluten proteins.</p>
+    </div>
+
+    <div class="fact-card" onclick="toggleCard(this)">
+      <h4>🧠 Symptoms Beyond Digestion</h4>
+      <p>Symptoms may include fatigue, anemia, headaches, joint pain, and neurological effects — not just digestive discomfort.</p>
+    </div>
+
+  </div>
+
+  <div class="footer-note">
+    Click each card to explore detailed scientific insights.
   </div>
 
 </section>
+
+<script>
+function toggleCard(card) {
+  card.classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
